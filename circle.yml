@@ -1,0 +1,10 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  cache_directories:
+  pre:
+    - docker login -u $DOCKER_USER -p $DOCKER_PASS -e $DOCKER_EMAIL
+  override:
+    - docker build -t $CIRCLE_BRANCH .

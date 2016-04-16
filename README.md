@@ -1,2 +1,2 @@
-# docker-nix-ci
+# docker-nix
 NIX docker container
