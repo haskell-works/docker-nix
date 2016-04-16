@@ -13,5 +13,5 @@ if [ "$IN_DOCKER" == 1 ]; then
 
   $(basename "$0") "$@"
 else
-  docker run -ti haskellworks/nix-ghc $(basename "$0") "$@"
+  docker run -ti "haskellworks/docker-nix:$(CIRCLE_BRANCH)" $(basename "$0") "$@"
 fi
