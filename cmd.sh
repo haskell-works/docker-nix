@@ -14,9 +14,9 @@ if [ "$IN_DOCKER" == 1 ]; then
   $(basename "$0") "$@"
 else
   docker run -ti \
-    -v "$DOCKER_MOUNT:$DOCKER_MOUNT"
-    -w "$PWD"
-    -e "HOME=$HOME"
-    "haskellworks/docker-nix:$(CIRCLE_BRANCH)" \
+    -v "$DOCKER_MOUNT:$DOCKER_MOUNT" \
+    -w "$PWD" \
+    -e "HOME=$HOME" \
+    "$DOCKER_NIX" \
     $(basename "$0") "$@"
 fi

@@ -20,4 +20,4 @@ deployment:
   development:
     branch: /.*/
     commands:
-      - docker push "haskellworks/docker-nix:$CIRCLE_BRANCH"
+      - docker push "$DOCKER_NIX"
