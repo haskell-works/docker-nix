@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ "$IN_DOCKER" == 1 ]; then
+if [ "$IN_DOCKER" == "" ]; then
   echo "cmd-install is meant to be run in docker container"
 
   if [ "$DOCKER_BIN" != "" ]; then
