@@ -1,7 +1,7 @@
 machine:
   environment:
     DOCKER_BIN: ~/bin
-    DOCKER_NIX: haskellworks/docker-nix:$(CIRCLE_BRANCH)
+    DOCKER_NIX: haskellworks/docker-nix:$CIRCLE_BRANCH
   services:
     - docker
 
