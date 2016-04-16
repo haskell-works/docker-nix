@@ -19,6 +19,6 @@ else
     -v "$DOCKER_MOUNT:$DOCKER_MOUNT"
     -w "$PWD"
     -e "HOME=$HOME"
-    "haskellworks/docker-nix:$(CIRCLE_BRANCH)" \
+    "$DOCKER_NIX" \
     $(basename "$0") "$@"
 fi

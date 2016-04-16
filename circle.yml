@@ -1,6 +1,7 @@
 machine:
   environment:
     DOCKER_BIN: ~/bin
+    DOCKER_NIX: haskellworks/docker-nix:$(CIRCLE_BRANCH)
   services:
     - docker
 
@@ -9,7 +10,7 @@ dependencies:
   pre:
     - docker login -u $DOCKER_USER -p $DOCKER_PASS -e $DOCKER_EMAIL
   override:
-    - docker build -t "haskellworks/docker-nix:$CIRCLE_BRANCH" .
+    - docker build -t "$DOCKER_NIX" .
 
 test:
   override:
