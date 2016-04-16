@@ -7,10 +7,10 @@ dependencies:
   pre:
     - docker login -u $DOCKER_USER -p $DOCKER_PASS -e $DOCKER_EMAIL
   override:
-    - docker build -t "haskell-works/docker-nix:$CIRCLE_BRANCH" .
+    - docker build -t "haskellworks/docker-nix:$CIRCLE_BRANCH" .
 
 deployment:
   development:
     branch: /.*/
     commands:
-      - docker push "haskell-works/docker-nix:$CIRCLE_BRANCH"
+      - docker push "haskellworks/docker-nix:$CIRCLE_BRANCH"
