@@ -11,5 +11,6 @@ dependencies:
 
 deployment:
   development:
+    branch: /.*/
     commands:
       - docker push "haskell-works/docker-nix:$CIRCLE_BRANCH"
