@@ -11,8 +11,8 @@ RUN echo "source /root/.nix-profile/etc/profile.d/nix.sh" >> /etc/bash.bashrc
 
 ENV IN_DOCKER 1
 ADD cmd.sh /bin/nix-env
-ADD cmd.sh /bin/ghc
-ADD cmd.sh /bin/cabal
 
 RUN nix-env -i cabal-install-1.22.9.0
 RUN nix-env -i ghc-7.10.3
+
+ADD cmd-install.sh /bin/cmd-install
