@@ -4,6 +4,8 @@ machine:
 
 dependencies:
   cache_directories:
+  environment:
+    DOCKER_BIN: ~/bin
   pre:
     - docker login -u $DOCKER_USER -p $DOCKER_PASS -e $DOCKER_EMAIL
   override:
