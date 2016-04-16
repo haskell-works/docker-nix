@@ -15,4 +15,4 @@ ADD cmd.sh /bin/nix-env
 RUN nix-env -i cabal-install-1.22.9.0
 RUN nix-env -i ghc-7.10.3
 
-ADD cmd-install.sh /bin/cmd-install
+ADD setup-circleci.sh /setup-circleci.sh
