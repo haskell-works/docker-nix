@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if []; then
+if [ "$IN_DOCKER" == 1 ]; then
   cmd=$(basename "$0")
   old_cmd=$(which $cmd)
   source /root/.nix-profile/etc/profile.d/nix.sh
